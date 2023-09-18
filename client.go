@@ -26,7 +26,7 @@ func NewClient(host string) *Client {
 
 // GetProduct returns a single product
 func (c *Client) GetProduct(id string) (*Product, error) {
-	res, err := http.Get(fmt.Sprintf("%s/product/10", c.host))
+	res, err := http.Get(fmt.Sprintf("%s/products/10", c.host))
 	if res.StatusCode != 200 || err != nil {
 		return nil, fmt.Errorf("unable to retrieve product: %v", err)
 	}
