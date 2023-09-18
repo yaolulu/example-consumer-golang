@@ -24,7 +24,7 @@ func TestConsumer(t *testing.T) {
 		UponReceiving("a request to get a product").
 		WithRequest(dsl.Request{
 			Method: "GET",
-			Path:   dsl.String("/product/10"),
+			Path:   dsl.String("/products/10"),
 		}).
 		WillRespondWith(dsl.Response{
 			Status:  200,
