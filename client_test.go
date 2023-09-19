@@ -27,8 +27,8 @@ func TestConsumer(t *testing.T) {
 			Path:   dsl.String("/products/10"),
 		}).
 		WillRespondWith(dsl.Response{
-			Status:  202,
-			Headers: dsl.MapMatcher{"Content-Type": dsl.Regex("application/json", "application/json;?.*")},
+			Status:  200,
+			Headers: dsl.MapMatcher{"Content-Type": dsl.String("application/json;charset=UTF-8")},
 			Body:    dsl.Match(&Product{}),
 		})
 
